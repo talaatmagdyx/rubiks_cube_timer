@@ -272,6 +272,14 @@ footer p {
     margin: 0;
 }
 
+/* Styles for the icons */
+.icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
 /* Styles for the link in the footer */
 footer a {
     color: #cccccc;
