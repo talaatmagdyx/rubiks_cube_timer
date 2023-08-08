@@ -1,0 +1,295 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set font and background color for body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Main container for the layout */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Fade-in animation for the entire container */
+    animation: fadeIn 1s ease both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Styles for the timer section on the left */
+.timer-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    /* Slide-in animation from the left */
+    animation: slideInLeft 1s ease both;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Styles for the timer section heading */
+.timer-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    /* Fade-in animation for the heading */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Styles for labels in the timer section */
+.timer-container label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+    /* Fade-in animation for labels */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Styles for puzzle size dropdown */
+#puzzleSize {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 15px;
+    /* Fade-in animation for the dropdown */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Styles for scramble information */
+#scramble {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666;
+    /* Fade-in animation for scramble information */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Styles for start and stop buttons */
+#startButton, #stopButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;
+    /* Fade-in animation for buttons */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Button hover and active effects */
+#startButton:hover, #stopButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#startButton:active, #stopButton:active {
+    transform: scale(0.95);
+}
+
+/* Disabled button style */
+#stopButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Timer display style */
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    /* Fade-in animation for timer display */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Styles for the right column */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Slide-in animation from the right */
+    animation: slideInRight 1s ease both;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Styles for information containers */
+.info-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* Fade-in animation for information containers */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Heading style for information containers */
+.info-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    /* Fade-in animation for container headings */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Paragraph style for information containers */
+.info-container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    /* Fade-in animation for paragraphs */
+    animation: fadeInUp 1s ease both;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .right-column {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timer-container {
+        padding: 15px;
+    }
+
+    .right-column {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .timer-container {
+        padding: 10px;
+    }
+
+    .timer-container h1 {
+        font-size: 24px;
+    }
+
+    .timer-container label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    #puzzleSize {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #scramble {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    #startButton, #stopButton {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    #timer {
+        font-size: 20px;
+    }
+
+    .info-container h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .info-container p {
+        font-size: 14px;
+    }
+}
+/* Styles for the footer */
+/* Styles for the footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    color: #cccccc;
+    font-size: 14px;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease both;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Styles for the link in the footer */
+footer a {
+    color: #cccccc;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ffc107; /* Change the color on hover as needed */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    footer {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+}
+
+
+
+
