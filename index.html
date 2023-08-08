@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rubik's Cube Timer</title>
 </head>
 <body>
+<div class="main-container">
+    <!-- Timer Section -->
+    <div class="timer-container">
+        <h1>Rubik's Cube Timer</h1>
+        <label for="puzzleSize">Select Puzzle Size:</label>
+        <select id="puzzleSize">
+            <option value="3">3x3</option>
+            <option value="4">4x4</option>
+            <option value="5">5x5</option>
+            <option value="6">6x6</option>
+            <option value="7">7x7</option>
+        </select>
+        <p id="scramble">Scramble: </p>
+        <button id="startButton">Start Timer</button>
+        <button id="stopButton" disabled>Stop Timer</button>
+        <p id="timer">Time: 0.00 seconds</p>
+    </div>
 
+    <!-- Right Column -->
+    <div class="right-column">
+        <!-- How to Play Section -->
+        <div class="info-container">
+            <h2>How to Play</h2>
+            <p>To play, twist the cube's sides to mix up the colors. The goal is to solve the cube so that each face has a single color. You can use algorithms and strategies to solve the cube layer by layer or by other methods, aiming for the fastest time!</p>
+        </div>
+
+        <!-- About Rubik's Cube Section -->
+        <div class="info-container">
+            <h2>About Rubik's Cube</h2>
+            <p>Rubik's Cube is a 3D combination puzzle invented in 1974 by Ernő Rubik. It's a widely popular puzzle that challenges players to solve it by twisting and turning its sides to align the colors on each face.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Made with ❤️ by Talaat | <a href="https://github.com/talaatmagdyx/rubiks_cube_timer" target="_blank">Source Code</a></p>
+</footer>
+<!-- JavaScript -->
+<script src="scripts/script.js"></script>
 </body>
 </html>
